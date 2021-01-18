@@ -10,7 +10,8 @@ cd /gpfs/alpinetds/csc190/scratch/gottlieb/run
 module load cuda
 
 #setenv CUDA_NIC_INTEROP 1
-setenv QUDA_RESOURCE_PATH /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune
+setenv QUDA_RESOURCE_PATH tune
+mkdir $QUDA_RESOURCE_PATH
 #export I_MPI_DEBUG=5
 foreach ns (8 12 16 20 24 28 32 )
    echo $ns
