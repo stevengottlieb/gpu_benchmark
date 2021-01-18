@@ -1,0 +1,1595 @@
+SU3 with improved KS action
+Microcanonical simulation with refreshing
+Rational function hybrid Monte Carlo algorithm
+MIMD version 7.8.1
+Machine = MPI (portable), with 1 nodes
+Host(0) = a04n09
+Username = gottlieb
+start: Thu Feb 22 16:05:52 2018
+
+Options selected...
+Generic double precision
+C_GLOBAL_INLINE
+DBLSTORE_FN
+D_FN_GATHER13
+FEWSUMS
+KS_MULTICG=HYBRID
+KS_MULTIFF=FNMAT
+VECLENGTH=4
+INT_ALG=INT_3G1F
+HISQ_REUNIT_ALLOW_SVD
+HISQ_REUNIT_SVD_REL_ERROR = 1e-08
+HISQ_REUNIT_SVD_ABS_ERROR = 1e-08
+HISQ_FORCE_FILTER = 5e-05
+HISQ_FF_MULTI_WRAPPER is ON
+type 0 for no prompts, 1 for prompts, or 2 for proofreading
+nx 24
+ny 24
+nz 24
+nt 24
+#node_geometry 1 1 1 1
+#ionode_geometry 1 1 1 1
+iseed 5682304
+n_pseudo 5
+load_rhmc_params rat.m013m065m838
+beta 5.6
+n_dyn_masses 3
+dyn_mass 0.013 0.065 0.838 
+dyn_flavors 2 1 1 
+u0 0.85535
+n_pseudo 5
+Loading rational function parameters for phi field 0
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.013000^2)^(2/4) (x+4*0.065000^2)^(1/4) (x+4*0.200000^2)^(-3/4) (x+4*99.900000^2)^(0/4)
+# Converged at 1215 iterations, error = 4.464654e-10
+# Rational function for MD
+y_MD -2 -1 3 0 
+z_MD 4 4 4 4 
+m_MD 0.013 0.065 0.2 99.9 
+order_MD 9
+Loading order 9 rational function approximation for MD:
+f(x) = (x+4*0.013000^2)^(-2/4) (x+4*0.065000^2)^(-1/4)
+       (x+4*0.200000^2)^(3/4) (x+4*99.900000^2)^(0/4)
+res_MD 1
+res_MD 0.00514784
+res_MD 0.00612558
+res_MD 0.00828319
+res_MD 0.0121182
+res_MD 0.0189525
+res_MD 0.0294186
+res_MD 0.0184701
+res_MD 0.0126582
+res_MD 0.00426269
+pole_MD 99.9
+pole_MD 0.000707741
+pole_MD 0.000998278
+pole_MD 0.00180478
+pole_MD 0.00374111
+pole_MD 0.00819894
+pole_MD 0.0169616
+pole_MD 0.0369479
+pole_MD 0.075128
+pole_MD 0.127496
+# CHECK: f(1.000000e-15) = 2.698640e+01 = 2.698640e+01?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (11,11)
+# Approximating the function (x+4*0.013000^2)^(2/8) (x+4*0.065000^2)^(1/8) (x+4*0.200000^2)^(-3/8) (x+4*99.900000^2)^(0/8)
+# Converged at 1458 iterations, error = 3.338720e-12
+# Rational function for GR
+y_GR 2 1 -3 0 
+z_GR 8 8 8 8 
+m_GR 0.013 0.065 0.2 99.9 
+order_GR 11
+Loading order 11 rational function approximation for GR:
+f(x) = (x+4*0.013000^2)^(2/8) (x+4*0.065000^2)^(1/8)
+       (x+4*0.200000^2)^(-3/8) (x+4*99.900000^2)^(0/8)
+res_GR 1
+res_GR -4.00609e-06
+res_GR -1.59992e-05
+res_GR -4.46557e-05
+res_GR -0.000113141
+res_GR -0.000272821
+res_GR -0.00061068
+res_GR -0.00191397
+res_GR -0.00501872
+res_GR -0.0107967
+res_GR -0.0183603
+res_GR -0.0205676
+pole_GR 99.9
+pole_GR 0.000746657
+pole_GR 0.00103376
+pole_GR 0.00169328
+pole_GR 0.00307417
+pole_GR 0.00589412
+pole_GR 0.0115793
+pole_GR 0.023595
+pole_GR 0.0438366
+pole_GR 0.0766925
+pole_GR 0.119109
+pole_GR 0.153573
+# CHECK: f(1.000000e-15) = 1.924986e-01 = 1.924986e-01?
+# Rational function for FA
+y_FA -2 -1 3 0 
+z_FA 8 8 8 8 
+m_FA 0.013 0.065 0.2 99.9 
+order_FA 11
+Loading order 11 rational function approximation for FA:
+f(x) = (x+4*0.013000^2)^(-2/8) (x+4*0.065000^2)^(-1/8)
+       (x+4*0.200000^2)^(3/8) (x+4*99.900000^2)^(0/8)
+res_FA 1
+res_FA 0.000276243
+res_FA 0.000526223
+res_FA 0.000880659
+res_FA 0.00147388
+res_FA 0.00250347
+res_FA 0.00440441
+res_FA 0.0090907
+res_FA 0.0111671
+res_FA 0.0124877
+res_FA 0.0105293
+res_FA 0.00437892
+pole_FA 99.9
+pole_FA 0.000712193
+pole_FA 0.000935541
+pole_FA 0.00147894
+pole_FA 0.00263078
+pole_FA 0.00499302
+pole_FA 0.00976792
+pole_FA 0.0187538
+pole_FA 0.0348901
+pole_FA 0.0628417
+pole_FA 0.102834
+pole_FA 0.143271
+Loading rational function parameters for phi field 1
+# CHECK: f(1.000000e-15) = 5.194844e+00 = 5.194844e+00?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 2
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 3
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 4
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon -0.358197
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.838000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 254 iterations, error = 1.451256e-10
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.838 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.838000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.123225
+res_MD 0.217719
+res_MD 0.442066
+res_MD 0.826188
+res_MD 1.62971
+res_MD 3.61674
+res_MD 10.5096
+res_MD 67.0971
+pole_MD 99.9
+pole_MD 3.0161
+pole_MD 4.35504
+pole_MD 7.97962
+pole_MD 17.0841
+pole_MD 41.5742
+pole_MD 123.226
+pole_MD 643.266
+# CHECK: f(1.000000e-15) = 7.724369e-01 = 7.724369e-01?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.838000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 328 iterations, error = 1.426221e-13
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.838 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.838000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 3.00731
+res_GR -0.0532344
+res_GR -0.176732
+res_GR -0.427264
+res_GR -0.977907
+res_GR -2.28828
+res_GR -5.8209
+res_GR -17.8443
+res_GR -84.0324
+res_GR -1466.92
+pole_GR 99.9
+pole_GR 3.02524
+pole_GR 3.96609
+pole_GR 6.10394
+pole_GR 10.5306
+pole_GR 19.7596
+pole_GR 40.1654
+pole_GR 91.6686
+pole_GR 266.728
+pole_GR 1678.31
+# CHECK: f(1.000000e-15) = 1.137807e+00 = 1.137807e+00?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.838 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.838000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.332523
+res_FA 0.0679576
+res_FA 0.156901
+res_FA 0.293908
+res_FA 0.542476
+res_FA 1.03576
+res_FA 2.13306
+res_FA 5.11817
+res_FA 17.1666
+res_FA 148.027
+pole_FA 99.9
+pole_FA 2.96457
+pole_FA 3.79677
+pole_FA 5.7428
+pole_FA 9.78765
+pole_FA 18.1889
+pole_FA 36.5712
+pole_FA 81.9291
+pole_FA 228.11
+pole_FA 1208.27
+Maximum rational func order is 11
+Naik term correction structure of multi_x:
+n_naiks 2
+n_pseudo_naik[0]=4
+n_orders_naik[0]=30
+eps_naik[0]=0.000000
+n_pseudo_naik[1]=1
+n_orders_naik[1]=7
+eps_naik[1]=-0.358197
+n_order_naik_total 37
+LAYOUT = Hypercubes, options = hyper_prime,
+automatic hyper_prime layout
+ON EACH NODE 24 x 24 x 24 x 24
+Mallocing 530.8 MBytes per node for lattice
+Disabling GPU-Direct RDMA access
+QUDA 0.9.0 (git v0.9.0a1-with_v.0.8_milc_interface-115-ge150ee4-sm_60)
+Found device 0: Tesla V100-SXM2-16GB
+Using device 0: Tesla V100-SXM2-16GB
+WARNING: Data reordering done on GPU (set with QUDA_REORDER_LOCATION=GPU/CPU)
+WARNING: Using device memory pool allocator
+WARNING: Using pinned memory pool allocator
+Loaded 1836 sets of cached parameters from /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+WARNING!!: Resetting random seed
+Made lattice
+Made nn gathers
+Made 3nn gathers
+Finished setup
+Aggregate time to setup 3.876470e+02
+
+
+warms 0
+trajecs 2
+traj_between_meas 2
+microcanonical_time_step 0.2
+steps_per_trajectory 2
+cgresid_md_fa_gr 2.5e-08 2e-08 2e-08 
+max_multicg_md_fa_gr 1750 1750 1750 
+cgprec_md_fa_gr 2 2 2 
+cgresid_md_fa_gr 5e-08 2e-08 2e-08 
+max_multicg_md_fa_gr 1750 1750 1750 
+cgprec_md_fa_gr 2 2 2 
+cgresid_md_fa_gr 5e-08 2e-08 2e-08 
+max_multicg_md_fa_gr 1750 1750 1750 
+cgprec_md_fa_gr 2 2 2 
+cgresid_md_fa_gr 5e-08 2e-08 2e-08 
+max_multicg_md_fa_gr 1750 1750 1750 
+cgprec_md_fa_gr 2 2 2 
+cgresid_md_fa_gr 5e-09 2e-09 2e-09 
+max_multicg_md_fa_gr 1750 1750 1750 
+cgprec_md_fa_gr 2 2 2 
+prec_ff 2
+number_of_pbp_masses 3
+max_cg_prop 1750
+max_cg_prop_restarts 5
+npbp_reps 1
+prec_pbp 2
+mass 0.013
+naik_term_epsilon 0
+error_for_propagator 2e-07
+rel_error_for_propagator 0
+mass 0.065
+naik_term_epsilon 0
+error_for_propagator 2e-07
+rel_error_for_propagator 0
+mass 0.838
+naik_term_epsilon -0.358197
+error_for_propagator 2e-08
+rel_error_for_propagator 0
+fresh 
+#reload_serial l1216b560m013m065m838.test
+forget 
+unit gauge configuration loaded
+CHECK PLAQ: 3.0000000000000000e+00 3.0000000000000000e+00
+CHECK NERSC LINKTR: 1.0000000000000000e+00 CKSUM: 0
+REUNITARIZE: time = 5.122267e+00
+Reunitarized for double precision. Max deviation 0.00e+00 changed to 0.00e+00
+Time to check unitarity = 5.290376e+00
+"Fat 7 (level 1)"
+path coefficients: npath  path_coeff
+                    0      1.250000e-01
+                    1      -6.250000e-02
+                    2      1.562500e-02
+                    3      -2.604167e-03
+Unitarization method = UNITARIZE_ANALYTIC
+Unitarizaton group = U(3)
+"Fat7 + 2xLepage"
+path coefficients: npath  path_coeff
+                    0      1.000000e+00
+                    1      -4.166667e-02
+                    2      -6.250000e-02
+                    3      1.562500e-02
+                    4      -2.604167e-03
+                    5      -1.250000e-01
+"1-link + Naik"
+path coefficients: npath  path_coeff
+                    0      1.250000e-01
+                    1      -4.166667e-02
+MAKING PATH TABLES
+Combined fattening and long-link calculation time: 0.497426
+Combined fattening and long-link calculation time: 2.435652
+FLTIME: time = 1.794787e+01 (HISQ QUDA D) mflops = 2.344483e+03
+Symanzik 1x1 + 1x2 + 1x1x1 action with HISQ quark loops
+gauge_action: total_dyn_flavors = 4
+loop coefficients: nloop rep loop_coeff  multiplicity
+                    0 0      1.000000e+00     6
+                    1 0      -2.486061e-02     12
+                    2 0      4.078970e-03     16
+WARMUPS COMPLETED
+Omelyan integration, 3 gauge for one 1 fermion step, steps= 2 eps= 2.000000e-01 alpha= 1.000000e-01 beta= 1.000000e-01
+GRSOURCE: sum = 4.9685842249e+05
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+PreTune N4quda19StaggeredDslashCudaI7double2S1_S1_dEE
+Tuning N4quda19StaggeredDslashCudaI7double2S1_S1_dEE with policy,comm=0000,reconstruct=18,topo=1111 at vol=12x24x24x24x1
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(0,0,0)
+    block=(32,1,1), shared=0, aux=(0,0,0,0) gives 359.63 Gflop/s, 979.10 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(1,0,0)
+    block=(32,1,1), shared=0, aux=(1,0,0,0) gives 359.30 Gflop/s, 978.21 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(6,0,0)
+    block=(32,1,1), shared=0, aux=(6,0,0,0) gives 358.82 Gflop/s, 976.88 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(7,0,0)
+    block=(32,1,1), shared=0, aux=(7,0,0,0) gives 359.14 Gflop/s, 977.78 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(8,0,0)
+    block=(32,1,1), shared=0, aux=(8,0,0,0) gives 358.84 Gflop/s, 976.94 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(9,0,0)
+    block=(32,1,1), shared=0, aux=(9,0,0,0) gives 358.91 Gflop/s, 977.13 GB/s
+Tuned block=(32,1,1), shared=0, aux=(0,0,0,0) giving 359.63 Gflop/s, 979.10 GB/s for N4quda19StaggeredDslashCudaI7double2S1_S1_dEE with policy,comm=0000,reconstruct=18,topo=1111
+PostTune N4quda19StaggeredDslashCudaI7double2S1_S1_dEE
+PreTune N4quda19StaggeredDslashCudaI7double2S1_S1_dEE
+Tuning N4quda19StaggeredDslashCudaI7double2S1_S1_dEE with policy,comm=0000,reconstruct=18,Xpay,topo=1111 at vol=12x24x24x24x1
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(0,0,0)
+    block=(32,1,1), shared=0, aux=(0,0,0,0) gives 356.53 Gflop/s, 960.60 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(1,0,0)
+    block=(32,1,1), shared=0, aux=(1,0,0,0) gives 357.50 Gflop/s, 963.20 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(6,0,0)
+    block=(32,1,1), shared=0, aux=(6,0,0,0) gives 356.78 Gflop/s, 961.28 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(7,0,0)
+    block=(32,1,1), shared=0, aux=(7,0,0,0) gives 357.52 Gflop/s, 963.25 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(8,0,0)
+    block=(32,1,1), shared=0, aux=(8,0,0,0) gives 356.71 Gflop/s, 961.10 GB/s
+About to call tunable.apply block=(32,1,1) grid=(1,1,1) shared_bytes=0 aux=(9,0,0)
+    block=(32,1,1), shared=0, aux=(9,0,0,0) gives 357.33 Gflop/s, 962.74 GB/s
+Tuned block=(32,1,1), shared=0, aux=(7,0,0,0) giving 357.52 Gflop/s, 963.25 GB/s for N4quda19StaggeredDslashCudaI7double2S1_S1_dEE with policy,comm=0000,reconstruct=18,Xpay,topo=1111
+PostTune N4quda19StaggeredDslashCudaI7double2S1_S1_dEE
+MultiShift CG: Converged after 59 iterations
+ shift=0, 59 iterations, relative residual: iterated = 1.505555e-08, true = 1.505555e-08
+ shift=1, 59 iterations, relative residual: iterated = 1.492274e-08, true = 1.492274e-08
+ shift=2, 59 iterations, relative residual: iterated = 1.462310e-08, true = 1.462310e-08
+ shift=3, 59 iterations, relative residual: iterated = 1.401939e-08, true = 1.401939e-08
+ shift=4, 59 iterations, relative residual: iterated = 1.287893e-08, true = 1.287893e-08
+ shift=5, 59 iterations, relative residual: iterated = 1.090507e-08, true = 1.090507e-08
+ shift=6, 59 iterations, relative residual: iterated = 7.809234e-09, true = 7.809234e-09
+ shift=7, 59 iterations, relative residual: iterated = 4.641587e-09, true = 4.641587e-09
+ shift=8, 59 iterations, relative residual: iterated = 2.159843e-09, true = 2.159843e-09
+ shift=9, 59 iterations, relative residual: iterated = 8.865971e-10, true = 8.865971e-10
+ shift=10, 59 iterations, relative residual: iterated = 4.549204e-10, true = 4.549204e-10
+Saving 1917 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+CONGRAD5: time = 1.966514e+01 (multicg_offset_QUDA D) masses = 11 iters = 59 mflops = 1.363705e+03
+ OK converged final_rsq= 2.3e-16 (cf 4e-16) rel = 6.8e-15 (cf 0) restarts = 0 iters= 59
+GRSOURCETIME: time = 8.520889e-02
+GRSOURCE: sum = 4.9842887341e+05
+MultiShift CG: Converged after 48 iterations
+ shift=0, 48 iterations, relative residual: iterated = 1.988119e-08, true = 1.988119e-08
+ shift=1, 48 iterations, relative residual: iterated = 3.382338e-09, true = 3.382338e-09
+ shift=2, 48 iterations, relative residual: iterated = 6.225789e-11, true = 6.225789e-11
+ shift=3, 48 iterations, relative residual: iterated = 2.674009e-14, true = 2.674495e-14
+ shift=4, 38 iterations, relative residual: iterated = 8.352804e-16, true = 9.393703e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.550142e-16, true = 4.685529e-16
+ shift=6, 17 iterations, relative residual: iterated = 4.553225e-16, true = 5.098988e-16
+ shift=7, 11 iterations, relative residual: iterated = 9.248835e-16, true = 9.506032e-16
+ shift=8, 7 iterations, relative residual: iterated = 5.055266e-16, true = 5.238290e-16
+Saving 1919 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+CONGRAD5: time = 9.421392e+00 (multicg_offset_QUDA D) masses = 9 iters = 48 mflops = 2.265040e+03
+ OK converged final_rsq= 4e-16 (cf 4e-16) rel = 2.2e-14 (cf 0) restarts = 0 iters= 48
+GRSOURCETIME: time = 7.929683e-02
+GRSOURCE: sum = 4.9817536029e+05
+MultiShift CG: Converged after 49 iterations
+ shift=0, 49 iterations, relative residual: iterated = 1.450285e-08, true = 1.450285e-08
+ shift=1, 49 iterations, relative residual: iterated = 2.399866e-09, true = 2.399866e-09
+ shift=2, 49 iterations, relative residual: iterated = 4.114682e-11, true = 4.114682e-11
+ shift=3, 49 iterations, relative residual: iterated = 1.514307e-14, true = 1.515217e-14
+ shift=4, 38 iterations, relative residual: iterated = 8.327085e-16, true = 9.305461e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.541917e-16, true = 4.672765e-16
+ shift=6, 17 iterations, relative residual: iterated = 4.482041e-16, true = 5.060032e-16
+ shift=7, 11 iterations, relative residual: iterated = 9.095985e-16, true = 9.261807e-16
+ shift=8, 7 iterations, relative residual: iterated = 5.015927e-16, true = 5.229364e-16
+CONGRAD5: time = 9.169221e-02 (multicg_offset_QUDA D) masses = 9 iters = 49 mflops = 2.375819e+05
+ OK converged final_rsq= 2.1e-16 (cf 4e-16) rel = 1.2e-14 (cf 0) restarts = 0 iters= 49
+GRSOURCETIME: time = 8.147502e-02
+GRSOURCE: sum = 4.9706215201e+05
+MultiShift CG: Converged after 48 iterations
+ shift=0, 48 iterations, relative residual: iterated = 1.822751e-08, true = 1.822751e-08
+ shift=1, 48 iterations, relative residual: iterated = 3.106671e-09, true = 3.106671e-09
+ shift=2, 48 iterations, relative residual: iterated = 5.743499e-11, true = 5.743499e-11
+ shift=3, 48 iterations, relative residual: iterated = 2.487233e-14, true = 2.487763e-14
+ shift=4, 38 iterations, relative residual: iterated = 8.343534e-16, true = 9.344752e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.533464e-16, true = 4.673650e-16
+ shift=6, 17 iterations, relative residual: iterated = 4.495896e-16, true = 5.119224e-16
+ shift=7, 11 iterations, relative residual: iterated = 9.015348e-16, true = 9.173621e-16
+ shift=8, 7 iterations, relative residual: iterated = 4.966597e-16, true = 5.159658e-16
+CONGRAD5: time = 9.042788e-02 (multicg_offset_QUDA D) masses = 9 iters = 48 mflops = 2.359873e+05
+ OK converged final_rsq= 3.3e-16 (cf 4e-16) rel = 1.9e-14 (cf 0) restarts = 0 iters= 48
+GRSOURCETIME: time = 8.193684e-02
+GRSOURCE: sum = 4.9792157567e+05
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.557314e-09, true = 1.557314e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.218917e-10, true = 1.218917e-10
+ shift=2, 25 iterations, relative residual: iterated = 1.069893e-12, true = 1.069893e-12
+ shift=3, 25 iterations, relative residual: iterated = 7.440025e-16, true = 8.013595e-16
+ shift=4, 20 iterations, relative residual: iterated = 2.465762e-16, true = 3.792912e-16
+ shift=5, 15 iterations, relative residual: iterated = 5.297936e-16, true = 5.683212e-16
+ shift=6, 12 iterations, relative residual: iterated = 1.002847e-16, true = 2.333501e-16
+ shift=7, 9 iterations, relative residual: iterated = 1.027328e-16, true = 2.169119e-16
+ shift=8, 6 iterations, relative residual: iterated = 3.621492e-16, true = 3.882873e-16
+CONGRAD5: time = 1.727619e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.433418e+04
+ OK converged final_rsq= 2.4e-18 (cf 4e-18) rel = 4.1e-16 (cf 0) restarts = 0 iters= 25
+GRSOURCETIME: time = 7.957387e-02
+PLAQUETTE ACTION: -1.114767e+07
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 59 iterations
+ shift=0, 59 iterations, relative residual: iterated = 1.466949e-08, true = 1.466949e-08
+ shift=1, 59 iterations, relative residual: iterated = 1.456871e-08, true = 1.456871e-08
+ shift=2, 59 iterations, relative residual: iterated = 1.432708e-08, true = 1.432708e-08
+ shift=3, 59 iterations, relative residual: iterated = 1.383105e-08, true = 1.383105e-08
+ shift=4, 59 iterations, relative residual: iterated = 1.287826e-08, true = 1.287826e-08
+ shift=5, 59 iterations, relative residual: iterated = 1.118599e-08, true = 1.118599e-08
+ shift=6, 59 iterations, relative residual: iterated = 8.674660e-09, true = 8.674660e-09
+ shift=7, 59 iterations, relative residual: iterated = 5.656151e-09, true = 5.656151e-09
+ shift=8, 59 iterations, relative residual: iterated = 2.876030e-09, true = 2.876030e-09
+ shift=9, 59 iterations, relative residual: iterated = 1.203284e-09, true = 1.203284e-09
+ shift=10, 59 iterations, relative residual: iterated = 5.390575e-10, true = 5.390575e-10
+CONGRAD5: time = 2.387221e-01 (multicg_offset_QUDA D) masses = 11 iters = 59 mflops = 1.123375e+05
+ OK converged final_rsq= 2.2e-16 (cf 4e-16) rel = 8.6e-15 (cf 0) restarts = 0 iters= 59
+MultiShift CG: Converged after 48 iterations
+ shift=0, 48 iterations, relative residual: iterated = 1.866834e-08, true = 1.866834e-08
+ shift=1, 48 iterations, relative residual: iterated = 3.916142e-09, true = 3.916142e-09
+ shift=2, 48 iterations, relative residual: iterated = 1.027792e-10, true = 1.027792e-10
+ shift=3, 48 iterations, relative residual: iterated = 8.006948e-14, true = 8.007089e-14
+ shift=4, 40 iterations, relative residual: iterated = 6.053664e-16, true = 7.535695e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.421082e-16, true = 6.255117e-16
+ shift=6, 18 iterations, relative residual: iterated = 3.495760e-16, true = 4.148050e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.617371e-16, true = 3.492167e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.728341e-17, true = 1.586880e-16
+CONGRAD5: time = 9.084606e-02 (multicg_offset_QUDA D) masses = 9 iters = 48 mflops = 2.349010e+05
+ OK converged final_rsq= 3.5e-16 (cf 4e-16) rel = 2.6e-14 (cf 0) restarts = 0 iters= 48
+MultiShift CG: Converged after 48 iterations
+ shift=0, 48 iterations, relative residual: iterated = 1.888684e-08, true = 1.888684e-08
+ shift=1, 48 iterations, relative residual: iterated = 3.961352e-09, true = 3.961352e-09
+ shift=2, 48 iterations, relative residual: iterated = 1.039258e-10, true = 1.039258e-10
+ shift=3, 48 iterations, relative residual: iterated = 8.090510e-14, true = 8.090665e-14
+ shift=4, 40 iterations, relative residual: iterated = 6.047728e-16, true = 7.617712e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.407760e-16, true = 6.252719e-16
+ shift=6, 18 iterations, relative residual: iterated = 3.445494e-16, true = 4.125438e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.578637e-16, true = 3.126584e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.694374e-17, true = 1.626251e-16
+CONGRAD5: time = 9.040403e-02 (multicg_offset_QUDA D) masses = 9 iters = 48 mflops = 2.360496e+05
+ OK converged final_rsq= 3.6e-16 (cf 4e-16) rel = 2.7e-14 (cf 0) restarts = 0 iters= 48
+MultiShift CG: Converged after 48 iterations
+ shift=0, 48 iterations, relative residual: iterated = 1.746526e-08, true = 1.746526e-08
+ shift=1, 48 iterations, relative residual: iterated = 3.667969e-09, true = 3.667969e-09
+ shift=2, 48 iterations, relative residual: iterated = 9.654202e-11, true = 9.654202e-11
+ shift=3, 48 iterations, relative residual: iterated = 7.563158e-14, true = 7.563344e-14
+ shift=4, 40 iterations, relative residual: iterated = 6.065277e-16, true = 7.417521e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.393549e-16, true = 6.211356e-16
+ shift=6, 18 iterations, relative residual: iterated = 3.467467e-16, true = 4.155871e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.556952e-16, true = 3.086671e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.635046e-17, true = 1.522829e-16
+CONGRAD5: time = 9.034896e-02 (multicg_offset_QUDA D) masses = 9 iters = 48 mflops = 2.361934e+05
+ OK converged final_rsq= 3.1e-16 (cf 4e-16) rel = 2.3e-14 (cf 0) restarts = 0 iters= 48
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.737984e-09, true = 1.737984e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.762387e-10, true = 1.762387e-10
+ shift=2, 25 iterations, relative residual: iterated = 2.086768e-12, true = 2.086767e-12
+ shift=3, 25 iterations, relative residual: iterated = 2.054860e-15, true = 2.078202e-15
+ shift=4, 20 iterations, relative residual: iterated = 7.536078e-16, true = 7.932519e-16
+ shift=5, 16 iterations, relative residual: iterated = 1.716941e-16, true = 2.700991e-16
+ shift=6, 12 iterations, relative residual: iterated = 3.307447e-16, true = 3.740168e-16
+ shift=7, 9 iterations, relative residual: iterated = 3.908828e-16, true = 4.375375e-16
+ shift=8, 7 iterations, relative residual: iterated = 1.008297e-17, true = 1.841074e-16
+CONGRAD5: time = 1.728251e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.431066e+04
+ OK converged final_rsq= 3e-18 (cf 4e-18) rel = 5.3e-16 (cf 0) restarts = 0 iters= 25
+ACTION: g,h,f = 0.00000000000000e+00  -1.36648497712955e+03  2.48844638386443e+06  2.48707989888730e+06
+DG = 0.000000e+00, DH = -1.366485e+03, DF = 2.488446e+06, D = 2.487080e+06
+ACTIONTIME: time = 7.504778e+00
+LINK_UPDATE: time = 1.865021e+00 mflops = 9.990526e+02
+GFTIME:   time = 1.769802e+01 (Symanzik1_QUDA) mflops = 2.868291e+03
+LINK_UPDATE: time = 1.711106e-02 mflops = 1.088918e+05
+Combined fattening and long-link calculation time: 0.016292
+Combined fattening and long-link calculation time: 0.041005
+FLTIME: time = 5.632019e-01 (HISQ QUDA D) mflops = 7.471297e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 90 iterations
+ shift=0, 90 iterations, relative residual: iterated = 2.353336e-08, true = 2.353336e-08
+ shift=1, 90 iterations, relative residual: iterated = 2.305653e-08, true = 2.305653e-08
+ shift=2, 90 iterations, relative residual: iterated = 2.178931e-08, true = 2.178931e-08
+ shift=3, 90 iterations, relative residual: iterated = 1.905640e-08, true = 1.905640e-08
+ shift=4, 90 iterations, relative residual: iterated = 1.411827e-08, true = 1.411827e-08
+ shift=5, 90 iterations, relative residual: iterated = 8.074928e-09, true = 8.074928e-09
+ shift=6, 90 iterations, relative residual: iterated = 2.546678e-09, true = 2.546678e-09
+ shift=7, 90 iterations, relative residual: iterated = 3.844342e-10, true = 3.844342e-10
+ shift=8, 90 iterations, relative residual: iterated = 4.310032e-11, true = 4.310032e-11
+Saving 1925 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+CONGRAD5: time = 2.834780e-01 (multicg_offset_QUDA D) masses = 9 iters = 90 mflops = 1.411474e+05
+ OK converged final_rsq= 5.5e-16 (cf 6.2e-16) rel = 2.2e-14 (cf 0) restarts = 0 iters= 90
+MultiShift CG: Converged after 59 iterations
+ shift=0, 59 iterations, relative residual: iterated = 4.890174e-08, true = 4.890174e-08
+ shift=1, 59 iterations, relative residual: iterated = 1.255042e-09, true = 1.255042e-09
+ shift=2, 59 iterations, relative residual: iterated = 1.422938e-13, true = 1.422953e-13
+ shift=3, 42 iterations, relative residual: iterated = 8.392883e-16, true = 9.529873e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.682947e-16, true = 7.347120e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.575206e-16, true = 4.303031e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.388304e-16, true = 2.039725e-16
+CONGRAD5: time = 9.973907e-02 (multicg_offset_QUDA D) masses = 7 iters = 59 mflops = 2.571005e+05
+ OK converged final_rsq= 2.4e-15 (cf 2.5e-15) rel = 1.8e-13 (cf 0) restarts = 0 iters= 59
+MultiShift CG: Converged after 59 iterations
+ shift=0, 59 iterations, relative residual: iterated = 4.628402e-08, true = 4.628402e-08
+ shift=1, 59 iterations, relative residual: iterated = 1.194044e-09, true = 1.194044e-09
+ shift=2, 59 iterations, relative residual: iterated = 1.368788e-13, true = 1.368798e-13
+ shift=3, 42 iterations, relative residual: iterated = 8.114546e-16, true = 9.426391e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.631232e-16, true = 7.270466e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.512669e-16, true = 4.060502e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.375807e-16, true = 2.051242e-16
+CONGRAD5: time = 1.015258e-01 (multicg_offset_QUDA D) masses = 7 iters = 59 mflops = 2.525759e+05
+ OK converged final_rsq= 2.1e-15 (cf 2.5e-15) rel = 1.6e-13 (cf 0) restarts = 0 iters= 59
+MultiShift CG: Converged after 59 iterations
+ shift=0, 59 iterations, relative residual: iterated = 4.748729e-08, true = 4.748729e-08
+ shift=1, 59 iterations, relative residual: iterated = 1.220948e-09, true = 1.220948e-09
+ shift=2, 59 iterations, relative residual: iterated = 1.390807e-13, true = 1.390814e-13
+ shift=3, 42 iterations, relative residual: iterated = 8.469488e-16, true = 9.613160e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.608361e-16, true = 7.377618e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.521331e-16, true = 4.054318e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.361616e-16, true = 2.060744e-16
+CONGRAD5: time = 1.004519e-01 (multicg_offset_QUDA D) masses = 7 iters = 59 mflops = 2.552760e+05
+ OK converged final_rsq= 2.3e-15 (cf 2.5e-15) rel = 1.7e-13 (cf 0) restarts = 0 iters= 59
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 24 iterations
+ shift=0, 24 iterations, relative residual: iterated = 3.481703e-09, true = 3.481703e-09
+ shift=1, 24 iterations, relative residual: iterated = 1.187672e-10, true = 1.187672e-10
+ shift=2, 24 iterations, relative residual: iterated = 1.234998e-13, true = 1.235002e-13
+ shift=3, 21 iterations, relative residual: iterated = 3.238451e-16, true = 4.414978e-16
+ shift=4, 15 iterations, relative residual: iterated = 3.266348e-16, true = 3.944475e-16
+ shift=5, 11 iterations, relative residual: iterated = 9.834582e-17, true = 2.413679e-16
+ shift=6, 7 iterations, relative residual: iterated = 7.796361e-16, true = 8.157004e-16
+CONGRAD5: time = 1.683950e-01 (multicg_offset_QUDA D) masses = 7 iters = 24 mflops = 6.194385e+04
+ OK converged final_rsq= 1.2e-17 (cf 2.5e-17) rel = 2.1e-15 (cf 0) restarts = 0 iters= 24
+FFTIME:  time = 4.154431e+01 (HISQ QUDA D) terms = 37 flops/site = 0 mflops = 0.000000e+00
+LINK_UPDATE: time = 1.709795e-02 mflops = 1.089753e+05
+GFTIME:   time = 3.457403e-02 (Symanzik1_QUDA) mflops = 1.468242e+06
+LINK_UPDATE: time = 1.713991e-02 mflops = 1.087085e+05
+GFTIME:   time = 3.451395e-02 (Symanzik1_QUDA) mflops = 1.470798e+06
+LINK_UPDATE: time = 1.715088e-02 mflops = 1.086390e+05
+GFTIME:   time = 3.462696e-02 (Symanzik1_QUDA) mflops = 1.465998e+06
+LINK_UPDATE: time = 1.718116e-02 mflops = 1.084475e+05
+GFTIME:   time = 3.462195e-02 (Symanzik1_QUDA) mflops = 1.466210e+06
+LINK_UPDATE: time = 1.716399e-02 mflops = 1.085560e+05
+Combined fattening and long-link calculation time: 0.016325
+Combined fattening and long-link calculation time: 0.041014
+FLTIME: time = 5.668349e-01 (HISQ QUDA D) mflops = 7.423411e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 112 iterations
+ shift=0, 112 iterations, relative residual: iterated = 2.264397e-08, true = 2.264397e-08
+ shift=1, 112 iterations, relative residual: iterated = 2.201559e-08, true = 2.201559e-08
+ shift=2, 112 iterations, relative residual: iterated = 2.036997e-08, true = 2.036997e-08
+ shift=3, 112 iterations, relative residual: iterated = 1.694646e-08, true = 1.694646e-08
+ shift=4, 112 iterations, relative residual: iterated = 1.123584e-08, true = 1.123584e-08
+ shift=5, 112 iterations, relative residual: iterated = 5.240700e-09, true = 5.240700e-09
+ shift=6, 112 iterations, relative residual: iterated = 1.095256e-09, true = 1.095256e-09
+ shift=7, 112 iterations, relative residual: iterated = 8.605335e-11, true = 8.605335e-11
+ shift=8, 112 iterations, relative residual: iterated = 4.637956e-12, true = 4.637956e-12
+Saving 2189 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+CONGRAD5: time = 3.196058e-01 (multicg_offset_QUDA D) masses = 9 iters = 112 mflops = 1.557949e+05
+ OK converged final_rsq= 5.1e-16 (cf 6.2e-16) rel = 1.8e-14 (cf 0) restarts = 0 iters= 112
+MultiShift CG: Converged after 62 iterations
+ shift=0, 62 iterations, relative residual: iterated = 4.310804e-08, true = 4.310804e-08
+ shift=1, 62 iterations, relative residual: iterated = 8.345442e-10, true = 8.345442e-10
+ shift=2, 62 iterations, relative residual: iterated = 4.916752e-14, true = 4.917215e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.038653e-16, true = 7.578953e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.019503e-16, true = 6.959068e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.039625e-16, true = 3.646989e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.252884e-16, true = 1.960307e-16
+CONGRAD5: time = 1.018999e-01 (multicg_offset_QUDA D) masses = 7 iters = 62 mflops = 2.644444e+05
+ OK converged final_rsq= 1.9e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 62
+MultiShift CG: Converged after 62 iterations
+ shift=0, 62 iterations, relative residual: iterated = 4.201740e-08, true = 4.201740e-08
+ shift=1, 62 iterations, relative residual: iterated = 8.165730e-10, true = 8.165730e-10
+ shift=2, 62 iterations, relative residual: iterated = 4.848941e-14, true = 4.849218e-14
+ shift=3, 43 iterations, relative residual: iterated = 5.970219e-16, true = 7.517309e-16
+ shift=4, 25 iterations, relative residual: iterated = 5.996187e-16, true = 6.779044e-16
+ shift=5, 15 iterations, relative residual: iterated = 2.977860e-16, true = 3.592989e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.244867e-16, true = 1.949853e-16
+CONGRAD5: time = 1.028850e-01 (multicg_offset_QUDA D) masses = 7 iters = 62 mflops = 2.619123e+05
+ OK converged final_rsq= 1.8e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 62
+MultiShift CG: Converged after 62 iterations
+ shift=0, 62 iterations, relative residual: iterated = 4.200580e-08, true = 4.200580e-08
+ shift=1, 62 iterations, relative residual: iterated = 8.173743e-10, true = 8.173743e-10
+ shift=2, 62 iterations, relative residual: iterated = 4.856455e-14, true = 4.856958e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.048448e-16, true = 7.576981e-16
+ shift=4, 25 iterations, relative residual: iterated = 5.970307e-16, true = 6.702500e-16
+ shift=5, 15 iterations, relative residual: iterated = 2.978172e-16, true = 3.585662e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.233331e-16, true = 1.952813e-16
+CONGRAD5: time = 1.019909e-01 (multicg_offset_QUDA D) masses = 7 iters = 62 mflops = 2.642082e+05
+ OK converged final_rsq= 1.8e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 62
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 24 iterations
+ shift=0, 24 iterations, relative residual: iterated = 3.375895e-09, true = 3.375895e-09
+ shift=1, 24 iterations, relative residual: iterated = 1.119731e-10, true = 1.119731e-10
+ shift=2, 24 iterations, relative residual: iterated = 1.110200e-13, true = 1.110202e-13
+ shift=3, 21 iterations, relative residual: iterated = 2.712424e-16, true = 4.456823e-16
+ shift=4, 15 iterations, relative residual: iterated = 2.771215e-16, true = 3.716303e-16
+ shift=5, 11 iterations, relative residual: iterated = 8.650251e-17, true = 2.025109e-16
+ shift=6, 7 iterations, relative residual: iterated = 7.248610e-16, true = 7.374328e-16
+CONGRAD5: time = 1.655090e-01 (multicg_offset_QUDA D) masses = 7 iters = 24 mflops = 6.302399e+04
+ OK converged final_rsq= 1.1e-17 (cf 2.5e-17) rel = 1.9e-15 (cf 0) restarts = 0 iters= 24
+FFTIME:  time = 1.512791e+00 (HISQ QUDA D) terms = 37 flops/site = 0 mflops = 0.000000e+00
+LINK_UPDATE: time = 1.715112e-02 mflops = 1.086375e+05
+GFTIME:   time = 3.466296e-02 (Symanzik1_QUDA) mflops = 1.464475e+06
+LINK_UPDATE: time = 1.715207e-02 mflops = 1.086314e+05
+REUNITARIZE: time = 1.305819e-02
+PLAQUETTE ACTION: -7.604028e+06
+Combined fattening and long-link calculation time: 0.016306
+Combined fattening and long-link calculation time: 0.040961
+FLTIME: time = 5.623271e-01 (HISQ QUDA D) mflops = 7.482919e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 116 iterations
+ shift=0, 116 iterations, relative residual: iterated = 1.956422e-08, true = 1.956422e-08
+ shift=1, 116 iterations, relative residual: iterated = 1.912437e-08, true = 1.912437e-08
+ shift=2, 116 iterations, relative residual: iterated = 1.809910e-08, true = 1.809910e-08
+ shift=3, 116 iterations, relative residual: iterated = 1.612039e-08, true = 1.612039e-08
+ shift=4, 116 iterations, relative residual: iterated = 1.276628e-08, true = 1.276628e-08
+ shift=5, 116 iterations, relative residual: iterated = 8.093713e-09, true = 8.093713e-09
+ shift=6, 116 iterations, relative residual: iterated = 3.608500e-09, true = 3.608500e-09
+ shift=7, 116 iterations, relative residual: iterated = 9.628485e-10, true = 9.628485e-10
+ shift=8, 116 iterations, relative residual: iterated = 1.290590e-10, true = 1.290590e-10
+ shift=9, 116 iterations, relative residual: iterated = 1.085190e-11, true = 1.085190e-11
+ shift=10, 116 iterations, relative residual: iterated = 1.209727e-12, true = 1.209727e-12
+CONGRAD5: time = 3.433549e-01 (multicg_offset_QUDA D) masses = 11 iters = 116 mflops = 1.535607e+05
+ OK converged final_rsq= 3.8e-16 (cf 4e-16) rel = 1.3e-14 (cf 0) restarts = 0 iters= 116
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.963845e-08, true = 1.963845e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.432789e-09, true = 1.432789e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.130800e-12, true = 4.130800e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.596266e-16, true = 9.639617e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.743921e-16, true = 9.168797e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.545186e-16, true = 6.461776e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.921836e-16, true = 3.905393e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.260863e-16, true = 3.141572e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.338225e-17, true = 1.506421e-16
+CONGRAD5: time = 1.152360e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.546275e+05
+ OK converged final_rsq= 3.9e-16 (cf 4e-16) rel = 2.5e-14 (cf 0) restarts = 0 iters= 66
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.909251e-08, true = 1.909251e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.395714e-09, true = 1.395714e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.040225e-12, true = 4.040224e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.524982e-16, true = 9.579469e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.627715e-16, true = 8.892693e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.559500e-16, true = 6.552544e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.864906e-16, true = 3.823523e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.229322e-16, true = 2.828262e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.312226e-17, true = 1.770449e-16
+CONGRAD5: time = 1.143138e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.566817e+05
+ OK converged final_rsq= 3.6e-16 (cf 4e-16) rel = 2.4e-14 (cf 0) restarts = 0 iters= 66
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.952484e-08, true = 1.952484e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.428280e-09, true = 1.428280e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.131956e-12, true = 4.131956e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.523939e-16, true = 9.652204e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.756418e-16, true = 8.935909e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.504332e-16, true = 6.353159e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.871805e-16, true = 3.665434e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.208349e-16, true = 2.901497e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.274940e-17, true = 1.620268e-16
+CONGRAD5: time = 1.150072e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.551343e+05
+ OK converged final_rsq= 3.8e-16 (cf 4e-16) rel = 2.5e-14 (cf 0) restarts = 0 iters= 66
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.830949e-09, true = 1.830949e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.822002e-10, true = 1.822002e-10
+ shift=2, 25 iterations, relative residual: iterated = 2.089042e-12, true = 2.089041e-12
+ shift=3, 25 iterations, relative residual: iterated = 1.973552e-15, true = 1.996934e-15
+ shift=4, 20 iterations, relative residual: iterated = 6.402707e-16, true = 6.893798e-16
+ shift=5, 16 iterations, relative residual: iterated = 1.436421e-16, true = 2.720545e-16
+ shift=6, 12 iterations, relative residual: iterated = 2.855263e-16, true = 3.450041e-16
+ shift=7, 9 iterations, relative residual: iterated = 3.538569e-16, true = 4.214083e-16
+ shift=8, 7 iterations, relative residual: iterated = 9.411929e-18, true = 1.366191e-16
+CONGRAD5: time = 1.729221e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.427457e+04
+ OK converged final_rsq= 3.4e-18 (cf 4e-18) rel = 5.5e-16 (cf 0) restarts = 0 iters= 25
+ACTION: g,h,f = 3.33416356892575e+06  -3.34780452833005e+06  2.50108071345330e+06  2.48743975404900e+06
+DG = 3.334164e+06, DH = -3.346438e+06, DF = 1.263433e+04, D = 3.598552e+02
+ACTIONTIME: time = 8.244903e+00
+CHECK: delta S = 3.598552e+02
+Aggregate time to do one trajectory 1.128361e+02
+Omelyan integration, 3 gauge for one 1 fermion step, steps= 2 eps= 2.000000e-01 alpha= 1.000000e-01 beta= 1.000000e-01
+GRSOURCE: sum = 4.9831751376e+05
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 117 iterations
+ shift=0, 117 iterations, relative residual: iterated = 1.548131e-08, true = 1.548131e-08
+ shift=1, 117 iterations, relative residual: iterated = 1.503338e-08, true = 1.503338e-08
+ shift=2, 117 iterations, relative residual: iterated = 1.405753e-08, true = 1.405753e-08
+ shift=3, 117 iterations, relative residual: iterated = 1.223254e-08, true = 1.223254e-08
+ shift=4, 117 iterations, relative residual: iterated = 9.262708e-09, true = 9.262708e-09
+ shift=5, 117 iterations, relative residual: iterated = 5.404282e-09, true = 5.404282e-09
+ shift=6, 117 iterations, relative residual: iterated = 1.876226e-09, true = 1.876226e-09
+ shift=7, 117 iterations, relative residual: iterated = 3.809174e-10, true = 3.809175e-10
+ shift=8, 117 iterations, relative residual: iterated = 4.020815e-11, true = 4.020815e-11
+ shift=9, 117 iterations, relative residual: iterated = 3.283721e-12, true = 3.283721e-12
+ shift=10, 117 iterations, relative residual: iterated = 5.346688e-13, true = 5.346681e-13
+CONGRAD5: time = 3.379431e-01 (multicg_offset_QUDA D) masses = 11 iters = 117 mflops = 1.573649e+05
+ OK converged final_rsq= 2.4e-16 (cf 4e-16) rel = 5.7e-15 (cf 0) restarts = 0 iters= 117
+GRSOURCETIME: time = 8.435082e-02
+GRSOURCE: sum = 4.9958837533e+05
+MultiShift CG: Converged after 67 iterations
+ shift=0, 67 iterations, relative residual: iterated = 1.621708e-08, true = 1.621708e-08
+ shift=1, 67 iterations, relative residual: iterated = 8.062187e-10, true = 8.062187e-10
+ shift=2, 67 iterations, relative residual: iterated = 1.235733e-12, true = 1.235734e-12
+ shift=3, 60 iterations, relative residual: iterated = 5.550777e-16, true = 8.271212e-16
+ shift=4, 39 iterations, relative residual: iterated = 7.258279e-16, true = 8.503013e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.417858e-16, true = 4.778401e-16
+ shift=6, 17 iterations, relative residual: iterated = 3.726712e-16, true = 4.329650e-16
+ shift=7, 11 iterations, relative residual: iterated = 8.060766e-16, true = 8.406729e-16
+ shift=8, 7 iterations, relative residual: iterated = 4.685621e-16, true = 4.879080e-16
+CONGRAD5: time = 1.157482e-01 (multicg_offset_QUDA D) masses = 9 iters = 67 mflops = 2.573419e+05
+ OK converged final_rsq= 2.6e-16 (cf 4e-16) rel = 1.3e-14 (cf 0) restarts = 0 iters= 67
+GRSOURCETIME: time = 8.192587e-02
+GRSOURCE: sum = 4.9734404282e+05
+MultiShift CG: Converged after 67 iterations
+ shift=0, 67 iterations, relative residual: iterated = 1.663844e-08, true = 1.663844e-08
+ shift=1, 67 iterations, relative residual: iterated = 8.253831e-10, true = 8.253831e-10
+ shift=2, 67 iterations, relative residual: iterated = 1.260309e-12, true = 1.260310e-12
+ shift=3, 60 iterations, relative residual: iterated = 5.508281e-16, true = 8.264048e-16
+ shift=4, 39 iterations, relative residual: iterated = 7.323340e-16, true = 8.544253e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.383453e-16, true = 4.620994e-16
+ shift=6, 17 iterations, relative residual: iterated = 3.724314e-16, true = 4.424022e-16
+ shift=7, 11 iterations, relative residual: iterated = 7.993107e-16, true = 8.252034e-16
+ shift=8, 7 iterations, relative residual: iterated = 4.688663e-16, true = 4.968277e-16
+CONGRAD5: time = 1.153350e-01 (multicg_offset_QUDA D) masses = 9 iters = 67 mflops = 2.582638e+05
+ OK converged final_rsq= 2.8e-16 (cf 4e-16) rel = 1.4e-14 (cf 0) restarts = 0 iters= 67
+GRSOURCETIME: time = 8.047009e-02
+GRSOURCE: sum = 4.9837462408e+05
+MultiShift CG: Converged after 67 iterations
+ shift=0, 67 iterations, relative residual: iterated = 1.684050e-08, true = 1.684050e-08
+ shift=1, 67 iterations, relative residual: iterated = 8.349936e-10, true = 8.349936e-10
+ shift=2, 67 iterations, relative residual: iterated = 1.273030e-12, true = 1.273030e-12
+ shift=3, 60 iterations, relative residual: iterated = 5.498295e-16, true = 8.425288e-16
+ shift=4, 39 iterations, relative residual: iterated = 7.391165e-16, true = 8.757630e-16
+ shift=5, 26 iterations, relative residual: iterated = 3.359472e-16, true = 4.670273e-16
+ shift=6, 17 iterations, relative residual: iterated = 3.741132e-16, true = 4.359451e-16
+ shift=7, 11 iterations, relative residual: iterated = 8.035795e-16, true = 8.404968e-16
+ shift=8, 7 iterations, relative residual: iterated = 4.668237e-16, true = 4.935072e-16
+CONGRAD5: time = 1.153660e-01 (multicg_offset_QUDA D) masses = 9 iters = 67 mflops = 2.581944e+05
+ OK converged final_rsq= 2.8e-16 (cf 4e-16) rel = 1.4e-14 (cf 0) restarts = 0 iters= 67
+GRSOURCETIME: time = 8.165717e-02
+GRSOURCE: sum = 4.9791416596e+05
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.627381e-09, true = 1.627381e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.247875e-10, true = 1.247875e-10
+ shift=2, 25 iterations, relative residual: iterated = 1.059224e-12, true = 1.059225e-12
+ shift=3, 25 iterations, relative residual: iterated = 7.060106e-16, true = 7.733354e-16
+ shift=4, 20 iterations, relative residual: iterated = 2.080504e-16, true = 3.383792e-16
+ shift=5, 15 iterations, relative residual: iterated = 4.516407e-16, true = 4.966371e-16
+ shift=6, 12 iterations, relative residual: iterated = 8.718638e-17, true = 1.950791e-16
+ shift=7, 9 iterations, relative residual: iterated = 9.342098e-17, true = 1.762996e-16
+ shift=8, 6 iterations, relative residual: iterated = 3.417488e-16, true = 3.761488e-16
+CONGRAD5: time = 1.721160e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.457560e+04
+ OK converged final_rsq= 2.6e-18 (cf 4e-18) rel = 4.2e-16 (cf 0) restarts = 0 iters= 25
+GRSOURCETIME: time = 7.958007e-02
+PLAQUETTE ACTION: -7.604028e+06
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 116 iterations
+ shift=0, 116 iterations, relative residual: iterated = 1.891779e-08, true = 1.891779e-08
+ shift=1, 116 iterations, relative residual: iterated = 1.849282e-08, true = 1.849282e-08
+ shift=2, 116 iterations, relative residual: iterated = 1.750220e-08, true = 1.750220e-08
+ shift=3, 116 iterations, relative residual: iterated = 1.559018e-08, true = 1.559018e-08
+ shift=4, 116 iterations, relative residual: iterated = 1.234859e-08, true = 1.234859e-08
+ shift=5, 116 iterations, relative residual: iterated = 7.831398e-09, true = 7.831398e-09
+ shift=6, 116 iterations, relative residual: iterated = 3.493240e-09, true = 3.493240e-09
+ shift=7, 116 iterations, relative residual: iterated = 9.326669e-10, true = 9.326669e-10
+ shift=8, 116 iterations, relative residual: iterated = 1.250946e-10, true = 1.250946e-10
+ shift=9, 116 iterations, relative residual: iterated = 1.052415e-11, true = 1.052415e-11
+ shift=10, 116 iterations, relative residual: iterated = 1.173617e-12, true = 1.173619e-12
+CONGRAD5: time = 3.324521e-01 (multicg_offset_QUDA D) masses = 11 iters = 116 mflops = 1.585968e+05
+ OK converged final_rsq= 3.6e-16 (cf 4e-16) rel = 1.2e-14 (cf 0) restarts = 0 iters= 116
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.893657e-08, true = 1.893657e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.384434e-09, true = 1.384434e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.008470e-12, true = 4.008470e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.557532e-16, true = 9.632756e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.480521e-16, true = 8.815305e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.564679e-16, true = 6.444395e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.859920e-16, true = 3.651209e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.244448e-16, true = 2.942847e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.327368e-17, true = 1.557259e-16
+CONGRAD5: time = 1.147380e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.557328e+05
+ OK converged final_rsq= 3.6e-16 (cf 4e-16) rel = 2.4e-14 (cf 0) restarts = 0 iters= 66
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.910884e-08, true = 1.910884e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.395971e-09, true = 1.395971e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.037119e-12, true = 4.037119e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.493781e-16, true = 9.529953e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.505011e-16, true = 8.736267e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.498998e-16, true = 6.382300e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.859624e-16, true = 3.660485e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.223652e-16, true = 2.917055e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.321306e-17, true = 1.739564e-16
+CONGRAD5: time = 1.144321e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.564164e+05
+ OK converged final_rsq= 3.7e-16 (cf 4e-16) rel = 2.4e-14 (cf 0) restarts = 0 iters= 66
+MultiShift CG: Converged after 66 iterations
+ shift=0, 66 iterations, relative residual: iterated = 1.923214e-08, true = 1.923214e-08
+ shift=1, 66 iterations, relative residual: iterated = 1.405159e-09, true = 1.405159e-09
+ shift=2, 66 iterations, relative residual: iterated = 4.062128e-12, true = 4.062128e-12
+ shift=3, 62 iterations, relative residual: iterated = 7.471757e-16, true = 9.546798e-16
+ shift=4, 41 iterations, relative residual: iterated = 7.583011e-16, true = 8.830306e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.468609e-16, true = 6.380461e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.872978e-16, true = 3.852333e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.234304e-16, true = 2.944223e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.311024e-17, true = 1.486498e-16
+CONGRAD5: time = 1.142440e-01 (multicg_offset_QUDA D) masses = 9 iters = 66 mflops = 2.568386e+05
+ OK converged final_rsq= 3.7e-16 (cf 4e-16) rel = 2.5e-14 (cf 0) restarts = 0 iters= 66
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.815789e-09, true = 1.815789e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.807940e-10, true = 1.807940e-10
+ shift=2, 25 iterations, relative residual: iterated = 2.074703e-12, true = 2.074703e-12
+ shift=3, 25 iterations, relative residual: iterated = 1.961794e-15, true = 1.987065e-15
+ shift=4, 20 iterations, relative residual: iterated = 6.404390e-16, true = 6.892338e-16
+ shift=5, 16 iterations, relative residual: iterated = 1.451540e-16, true = 2.575121e-16
+ shift=6, 12 iterations, relative residual: iterated = 2.885124e-16, true = 3.531736e-16
+ shift=7, 9 iterations, relative residual: iterated = 3.559724e-16, true = 4.103544e-16
+ shift=8, 7 iterations, relative residual: iterated = 9.412694e-18, true = 1.340671e-16
+CONGRAD5: time = 1.722691e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.451822e+04
+ OK converged final_rsq= 3.3e-18 (cf 4e-18) rel = 5.5e-16 (cf 0) restarts = 0 iters= 25
+ACTION: g,h,f = 3.33416356892575e+06  -3.25960603270288e+03  2.49153872195197e+06  5.82244268484501e+06
+DG = 0.000000e+00, DH = 3.344545e+06, DF = -9.541992e+03, D = 3.335003e+06
+ACTIONTIME: time = 7.672848e+00
+LINK_UPDATE: time = 1.718402e-02 mflops = 1.084295e+05
+GFTIME:   time = 3.460813e-02 (Symanzik1_QUDA) mflops = 1.466796e+06
+LINK_UPDATE: time = 1.718593e-02 mflops = 1.084174e+05
+Combined fattening and long-link calculation time: 0.016304
+Combined fattening and long-link calculation time: 0.041065
+FLTIME: time = 5.601220e-01 (HISQ QUDA D) mflops = 7.512379e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 116 iterations
+ shift=0, 116 iterations, relative residual: iterated = 2.007974e-08, true = 2.007974e-08
+ shift=1, 116 iterations, relative residual: iterated = 1.949437e-08, true = 1.949437e-08
+ shift=2, 116 iterations, relative residual: iterated = 1.796576e-08, true = 1.796576e-08
+ shift=3, 116 iterations, relative residual: iterated = 1.480767e-08, true = 1.480767e-08
+ shift=4, 116 iterations, relative residual: iterated = 9.619177e-09, true = 9.619177e-09
+ shift=5, 116 iterations, relative residual: iterated = 4.324783e-09, true = 4.324783e-09
+ shift=6, 116 iterations, relative residual: iterated = 8.411342e-10, true = 8.411342e-10
+ shift=7, 116 iterations, relative residual: iterated = 5.914507e-11, true = 5.914507e-11
+ shift=8, 116 iterations, relative residual: iterated = 2.817946e-12, true = 2.817945e-12
+CONGRAD5: time = 3.157179e-01 (multicg_offset_QUDA D) masses = 9 iters = 116 mflops = 1.633460e+05
+ OK converged final_rsq= 4e-16 (cf 6.2e-16) rel = 1.3e-14 (cf 0) restarts = 0 iters= 116
+MultiShift CG: Converged after 63 iterations
+ shift=0, 63 iterations, relative residual: iterated = 4.275740e-08, true = 4.275740e-08
+ shift=1, 63 iterations, relative residual: iterated = 7.617877e-10, true = 7.617877e-10
+ shift=2, 63 iterations, relative residual: iterated = 3.700186e-14, true = 3.700716e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.388650e-16, true = 7.850111e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.196707e-16, true = 6.893851e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.044522e-16, true = 3.711460e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.278247e-16, true = 1.966402e-16
+CONGRAD5: time = 1.054399e-01 (multicg_offset_QUDA D) masses = 7 iters = 63 mflops = 2.596880e+05
+ OK converged final_rsq= 1.8e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 63
+MultiShift CG: Converged after 63 iterations
+ shift=0, 63 iterations, relative residual: iterated = 4.247543e-08, true = 4.247543e-08
+ shift=1, 63 iterations, relative residual: iterated = 7.554741e-10, true = 7.554741e-10
+ shift=2, 63 iterations, relative residual: iterated = 3.661067e-14, true = 3.661615e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.355788e-16, true = 7.890161e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.130340e-16, true = 6.895527e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.020193e-16, true = 3.661645e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.266904e-16, true = 1.959196e-16
+CONGRAD5: time = 1.064429e-01 (multicg_offset_QUDA D) masses = 7 iters = 63 mflops = 2.572409e+05
+ OK converged final_rsq= 1.8e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 63
+MultiShift CG: Converged after 63 iterations
+ shift=0, 63 iterations, relative residual: iterated = 4.260699e-08, true = 4.260699e-08
+ shift=1, 63 iterations, relative residual: iterated = 7.582710e-10, true = 7.582710e-10
+ shift=2, 63 iterations, relative residual: iterated = 3.672452e-14, true = 3.672906e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.534165e-16, true = 8.013792e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.132631e-16, true = 6.959201e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.042702e-16, true = 3.693340e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.270372e-16, true = 1.961371e-16
+CONGRAD5: time = 1.061859e-01 (multicg_offset_QUDA D) masses = 7 iters = 63 mflops = 2.578635e+05
+ OK converged final_rsq= 1.8e-15 (cf 2.5e-15) rel = 1.2e-13 (cf 0) restarts = 0 iters= 63
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 24 iterations
+ shift=0, 24 iterations, relative residual: iterated = 3.507735e-09, true = 3.507735e-09
+ shift=1, 24 iterations, relative residual: iterated = 1.161914e-10, true = 1.161914e-10
+ shift=2, 24 iterations, relative residual: iterated = 1.150364e-13, true = 1.150368e-13
+ shift=3, 21 iterations, relative residual: iterated = 2.781142e-16, true = 4.012248e-16
+ shift=4, 15 iterations, relative residual: iterated = 2.867160e-16, true = 3.659741e-16
+ shift=5, 11 iterations, relative residual: iterated = 8.936003e-17, true = 1.929431e-16
+ shift=6, 7 iterations, relative residual: iterated = 7.410875e-16, true = 7.554432e-16
+CONGRAD5: time = 1.686201e-01 (multicg_offset_QUDA D) masses = 7 iters = 24 mflops = 6.186117e+04
+ OK converged final_rsq= 1.2e-17 (cf 2.5e-17) rel = 2.1e-15 (cf 0) restarts = 0 iters= 24
+FFTIME:  time = 1.519144e+00 (HISQ QUDA D) terms = 37 flops/site = 0 mflops = 0.000000e+00
+LINK_UPDATE: time = 1.712298e-02 mflops = 1.088160e+05
+GFTIME:   time = 3.461695e-02 (Symanzik1_QUDA) mflops = 1.466422e+06
+LINK_UPDATE: time = 1.715302e-02 mflops = 1.086254e+05
+GFTIME:   time = 3.474998e-02 (Symanzik1_QUDA) mflops = 1.460808e+06
+LINK_UPDATE: time = 1.717615e-02 mflops = 1.084791e+05
+GFTIME:   time = 3.472996e-02 (Symanzik1_QUDA) mflops = 1.461650e+06
+LINK_UPDATE: time = 1.716423e-02 mflops = 1.085545e+05
+GFTIME:   time = 3.469682e-02 (Symanzik1_QUDA) mflops = 1.463046e+06
+LINK_UPDATE: time = 1.716495e-02 mflops = 1.085500e+05
+Combined fattening and long-link calculation time: 0.016294
+Combined fattening and long-link calculation time: 0.041064
+FLTIME: time = 5.648582e-01 (HISQ QUDA D) mflops = 7.449389e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 120 iterations
+ shift=0, 120 iterations, relative residual: iterated = 2.105309e-08, true = 2.105309e-08
+ shift=1, 120 iterations, relative residual: iterated = 2.040423e-08, true = 2.040423e-08
+ shift=2, 120 iterations, relative residual: iterated = 1.871564e-08, true = 1.871564e-08
+ shift=3, 120 iterations, relative residual: iterated = 1.525605e-08, true = 1.525605e-08
+ shift=4, 120 iterations, relative residual: iterated = 9.674456e-09, true = 9.674456e-09
+ shift=5, 120 iterations, relative residual: iterated = 4.167195e-09, true = 4.167195e-09
+ shift=6, 120 iterations, relative residual: iterated = 7.463960e-10, true = 7.463960e-10
+ shift=7, 120 iterations, relative residual: iterated = 4.633996e-11, true = 4.633996e-11
+ shift=8, 120 iterations, relative residual: iterated = 1.926986e-12, true = 1.926987e-12
+CONGRAD5: time = 3.220439e-01 (multicg_offset_QUDA D) masses = 9 iters = 120 mflops = 1.656593e+05
+ OK converged final_rsq= 4.4e-16 (cf 6.2e-16) rel = 1.4e-14 (cf 0) restarts = 0 iters= 120
+MultiShift CG: Converged after 64 iterations
+ shift=0, 64 iterations, relative residual: iterated = 4.826234e-08, true = 4.826234e-08
+ shift=1, 64 iterations, relative residual: iterated = 7.692988e-10, true = 7.692988e-10
+ shift=2, 64 iterations, relative residual: iterated = 2.936327e-14, true = 2.936953e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.900399e-16, true = 8.301524e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.369435e-16, true = 7.042401e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.086284e-16, true = 3.714483e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.300611e-16, true = 1.999586e-16
+CONGRAD5: time = 1.050348e-01 (multicg_offset_QUDA D) masses = 7 iters = 64 mflops = 2.648274e+05
+ OK converged final_rsq= 2.3e-15 (cf 2.5e-15) rel = 1.5e-13 (cf 0) restarts = 0 iters= 64
+MultiShift CG: Converged after 64 iterations
+ shift=0, 64 iterations, relative residual: iterated = 4.779883e-08, true = 4.779883e-08
+ shift=1, 64 iterations, relative residual: iterated = 7.608682e-10, true = 7.608682e-10
+ shift=2, 64 iterations, relative residual: iterated = 2.895427e-14, true = 2.896197e-14
+ shift=3, 43 iterations, relative residual: iterated = 6.859813e-16, true = 8.279686e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.317030e-16, true = 7.036525e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.025578e-16, true = 3.645931e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.280231e-16, true = 2.354870e-16
+CONGRAD5: time = 1.047840e-01 (multicg_offset_QUDA D) masses = 7 iters = 64 mflops = 2.654613e+05
+ OK converged final_rsq= 2.3e-15 (cf 2.5e-15) rel = 1.5e-13 (cf 0) restarts = 0 iters= 64
+MultiShift CG: Converged after 64 iterations
+ shift=0, 64 iterations, relative residual: iterated = 4.760466e-08, true = 4.760466e-08
+ shift=1, 64 iterations, relative residual: iterated = 7.576811e-10, true = 7.576811e-10
+ shift=2, 64 iterations, relative residual: iterated = 2.879757e-14, true = 2.880359e-14
+ shift=3, 43 iterations, relative residual: iterated = 7.097196e-16, true = 8.491816e-16
+ shift=4, 25 iterations, relative residual: iterated = 6.248205e-16, true = 7.049221e-16
+ shift=5, 15 iterations, relative residual: iterated = 3.066585e-16, true = 3.665770e-16
+ shift=6, 9 iterations, relative residual: iterated = 1.285971e-16, true = 2.204175e-16
+CONGRAD5: time = 1.047032e-01 (multicg_offset_QUDA D) masses = 7 iters = 64 mflops = 2.656662e+05
+ OK converged final_rsq= 2.3e-15 (cf 2.5e-15) rel = 1.4e-13 (cf 0) restarts = 0 iters= 64
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 24 iterations
+ shift=0, 24 iterations, relative residual: iterated = 3.691921e-09, true = 3.691921e-09
+ shift=1, 24 iterations, relative residual: iterated = 1.217260e-10, true = 1.217260e-10
+ shift=2, 24 iterations, relative residual: iterated = 1.197015e-13, true = 1.197028e-13
+ shift=3, 21 iterations, relative residual: iterated = 2.842621e-16, true = 3.944147e-16
+ shift=4, 15 iterations, relative residual: iterated = 2.907978e-16, true = 3.644014e-16
+ shift=5, 11 iterations, relative residual: iterated = 9.086906e-17, true = 1.955903e-16
+ shift=6, 7 iterations, relative residual: iterated = 7.575507e-16, true = 7.877169e-16
+CONGRAD5: time = 1.655030e-01 (multicg_offset_QUDA D) masses = 7 iters = 24 mflops = 6.302626e+04
+ OK converged final_rsq= 1.4e-17 (cf 2.5e-17) rel = 2.3e-15 (cf 0) restarts = 0 iters= 24
+FFTIME:  time = 1.511903e+00 (HISQ QUDA D) terms = 37 flops/site = 0 mflops = 0.000000e+00
+LINK_UPDATE: time = 1.713920e-02 mflops = 1.087130e+05
+GFTIME:   time = 3.460002e-02 (Symanzik1_QUDA) mflops = 1.467139e+06
+LINK_UPDATE: time = 1.715493e-02 mflops = 1.086133e+05
+REUNITARIZE: time = 1.305699e-02
+PLAQUETTE ACTION: -6.880662e+06
+Combined fattening and long-link calculation time: 0.016303
+Combined fattening and long-link calculation time: 0.040982
+FLTIME: time = 5.657799e-01 (HISQ QUDA D) mflops = 7.437253e+04
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 123 iterations
+ shift=0, 123 iterations, relative residual: iterated = 1.782083e-08, true = 1.782083e-08
+ shift=1, 123 iterations, relative residual: iterated = 1.738343e-08, true = 1.738343e-08
+ shift=2, 123 iterations, relative residual: iterated = 1.636779e-08, true = 1.636779e-08
+ shift=3, 123 iterations, relative residual: iterated = 1.442397e-08, true = 1.442397e-08
+ shift=4, 123 iterations, relative residual: iterated = 1.118349e-08, true = 1.118349e-08
+ shift=5, 123 iterations, relative residual: iterated = 6.809522e-09, true = 6.809522e-09
+ shift=6, 123 iterations, relative residual: iterated = 2.833645e-09, true = 2.833645e-09
+ shift=7, 123 iterations, relative residual: iterated = 6.790974e-10, true = 6.790974e-10
+ shift=8, 123 iterations, relative residual: iterated = 7.792387e-11, true = 7.792387e-11
+ shift=9, 123 iterations, relative residual: iterated = 5.447832e-12, true = 5.447832e-12
+ shift=10, 123 iterations, relative residual: iterated = 5.172705e-13, true = 5.172725e-13
+CONGRAD5: time = 3.439701e-01 (multicg_offset_QUDA D) masses = 11 iters = 123 mflops = 1.625362e+05
+ OK converged final_rsq= 3.2e-16 (cf 4e-16) rel = 9.5e-15 (cf 0) restarts = 0 iters= 123
+MultiShift CG: Converged after 69 iterations
+ shift=0, 69 iterations, relative residual: iterated = 1.841348e-08, true = 1.841348e-08
+ shift=1, 69 iterations, relative residual: iterated = 1.132199e-09, true = 1.132199e-09
+ shift=2, 69 iterations, relative residual: iterated = 2.267177e-12, true = 2.267177e-12
+ shift=3, 63 iterations, relative residual: iterated = 6.239231e-16, true = 8.727204e-16
+ shift=4, 41 iterations, relative residual: iterated = 8.547671e-16, true = 9.695204e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.841331e-16, true = 6.713783e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.957264e-16, true = 3.736528e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.322415e-16, true = 2.969517e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.489505e-17, true = 1.494000e-16
+CONGRAD5: time = 1.185400e-01 (multicg_offset_QUDA D) masses = 9 iters = 69 mflops = 2.587818e+05
+ OK converged final_rsq= 3.4e-16 (cf 4e-16) rel = 2.1e-14 (cf 0) restarts = 0 iters= 69
+MultiShift CG: Converged after 69 iterations
+ shift=0, 69 iterations, relative residual: iterated = 1.789041e-08, true = 1.789041e-08
+ shift=1, 69 iterations, relative residual: iterated = 1.101757e-09, true = 1.101757e-09
+ shift=2, 69 iterations, relative residual: iterated = 2.213528e-12, true = 2.213528e-12
+ shift=3, 63 iterations, relative residual: iterated = 6.132430e-16, true = 8.634424e-16
+ shift=4, 41 iterations, relative residual: iterated = 8.398178e-16, true = 9.510673e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.810970e-16, true = 6.730114e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.929096e-16, true = 3.833413e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.249955e-16, true = 2.862391e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.443758e-17, true = 1.619038e-16
+CONGRAD5: time = 1.181710e-01 (multicg_offset_QUDA D) masses = 9 iters = 69 mflops = 2.595900e+05
+ OK converged final_rsq= 3.2e-16 (cf 4e-16) rel = 2e-14 (cf 0) restarts = 0 iters= 69
+MultiShift CG: Converged after 69 iterations
+ shift=0, 69 iterations, relative residual: iterated = 1.855612e-08, true = 1.855612e-08
+ shift=1, 69 iterations, relative residual: iterated = 1.140006e-09, true = 1.140006e-09
+ shift=2, 69 iterations, relative residual: iterated = 2.278824e-12, true = 2.278823e-12
+ shift=3, 63 iterations, relative residual: iterated = 6.044535e-16, true = 8.540246e-16
+ shift=4, 41 iterations, relative residual: iterated = 8.727308e-16, true = 9.852831e-16
+ shift=5, 27 iterations, relative residual: iterated = 5.663534e-16, true = 6.531283e-16
+ shift=6, 18 iterations, relative residual: iterated = 2.953338e-16, true = 3.744970e-16
+ shift=7, 12 iterations, relative residual: iterated = 2.290286e-16, true = 2.925392e-16
+ shift=8, 8 iterations, relative residual: iterated = 4.438927e-17, true = 1.510362e-16
+CONGRAD5: time = 1.182659e-01 (multicg_offset_QUDA D) masses = 9 iters = 69 mflops = 2.593818e+05
+ OK converged final_rsq= 3.4e-16 (cf 4e-16) rel = 2.1e-14 (cf 0) restarts = 0 iters= 69
+ks_multicg_offset_field_gpu: fn, notify: Signal QUDA to refresh links
+ks_multicg_offset_field_gpu: naik_epsilon: Signal QUDA to refresh links
+MultiShift CG: Converged after 25 iterations
+ shift=0, 25 iterations, relative residual: iterated = 1.987280e-09, true = 1.987280e-09
+ shift=1, 25 iterations, relative residual: iterated = 1.967872e-10, true = 1.967872e-10
+ shift=2, 25 iterations, relative residual: iterated = 2.239816e-12, true = 2.239816e-12
+ shift=3, 25 iterations, relative residual: iterated = 2.100102e-15, true = 2.122756e-15
+ shift=4, 20 iterations, relative residual: iterated = 6.712245e-16, true = 7.249765e-16
+ shift=5, 16 iterations, relative residual: iterated = 1.501723e-16, true = 2.592678e-16
+ shift=6, 12 iterations, relative residual: iterated = 2.986336e-16, true = 3.454685e-16
+ shift=7, 9 iterations, relative residual: iterated = 3.703631e-16, true = 4.001282e-16
+ shift=8, 7 iterations, relative residual: iterated = 9.801788e-18, true = 1.487058e-16
+CONGRAD5: time = 1.723871e-01 (multicg_offset_QUDA D) masses = 9 iters = 25 mflops = 6.447405e+04
+ OK converged final_rsq= 3.9e-18 (cf 4e-18) rel = 6.4e-16 (cf 0) restarts = 0 iters= 25
+ACTION: g,h,f = 4.01872013193290e+06  -6.87143946277410e+05  2.49196747169113e+06  5.82354365734663e+06
+DG = 6.845566e+05, DH = -6.838843e+05, DF = 4.287497e+02, D = 1.100973e+03
+ACTIONTIME: time = 8.262070e+00
+CHECK: delta S = 1.100973e+03
+Aggregate time to do one trajectory 2.494891e+01
+PLAQ:	1.8514651211349373	1.8519057063285722
+P_LOOP:	3.272746e-02	4.749756e-03
+G_LOOP:  0  0  4   	1.8519478465541150e+00	( 0 1 7 6  )
+G_LOOP:  0  1  4   	1.8512113731919340e+00	( 0 2 7 5  )
+G_LOOP:  0  2  4   	1.8513014073833811e+00	( 0 3 7 4  )
+G_LOOP:  0  3  4   	1.8512361436584901e+00	( 1 2 6 5  )
+G_LOOP:  0  4  4   	1.8526914566178179e+00	( 1 3 6 4  )
+G_LOOP:  0  5  4   	1.8517242549846662e+00	( 2 3 5 4  )
+G_LOOP:  1  0  6   	1.2814751258925317e+00	( 0 0 1 7 7 6  )
+G_LOOP:  1  1  6   	1.2804877178233394e+00	( 0 0 2 7 7 5  )
+G_LOOP:  1  2  6   	1.2822580534052439e+00	( 0 0 3 7 7 4  )
+G_LOOP:  1  3  6   	1.2817151367056987e+00	( 1 1 0 6 6 7  )
+G_LOOP:  1  4  6   	1.2799556538506995e+00	( 1 1 2 6 6 5  )
+G_LOOP:  1  5  6   	1.2836426419076896e+00	( 1 1 3 6 6 4  )
+G_LOOP:  1  6  6   	1.2808353470643667e+00	( 2 2 0 5 5 7  )
+G_LOOP:  1  7  6   	1.2805670290105267e+00	( 2 2 1 5 5 6  )
+G_LOOP:  1  8  6   	1.2809553322462242e+00	( 2 2 3 5 5 4  )
+G_LOOP:  1  9  6   	1.2814016549812002e+00	( 3 3 0 4 4 7  )
+G_LOOP:  1  10  6   	1.2825426585194610e+00	( 3 3 1 4 4 6  )
+G_LOOP:  1  11  6   	1.2801364677841052e+00	( 3 3 2 4 4 5  )
+G_LOOP:  2  0  6   	1.2866959877111366e+00	( 0 1 2 7 6 5  )
+G_LOOP:  2  1  6   	1.2863679182249417e+00	( 0 1 5 7 6 2  )
+G_LOOP:  2  2  6   	1.2864350759554939e+00	( 0 6 2 7 1 5  )
+G_LOOP:  2  3  6   	1.2859595555613106e+00	( 0 6 5 7 1 2  )
+G_LOOP:  2  4  6   	1.2877348830951023e+00	( 0 1 3 7 6 4  )
+G_LOOP:  2  5  6   	1.2867261463219311e+00	( 0 1 4 7 6 3  )
+G_LOOP:  2  6  6   	1.2868195396804307e+00	( 0 6 3 7 1 4  )
+G_LOOP:  2  7  6   	1.2871317577503392e+00	( 0 6 4 7 1 3  )
+G_LOOP:  2  8  6   	1.2869610837513032e+00	( 0 2 3 7 5 4  )
+G_LOOP:  2  9  6   	1.2849770163766683e+00	( 0 2 4 7 5 3  )
+G_LOOP:  2  10  6   	1.2865778839262791e+00	( 0 5 3 7 2 4  )
+G_LOOP:  2  11  6   	1.2873367556892044e+00	( 0 5 4 7 2 3  )
+G_LOOP:  2  12  6   	1.2880172984225418e+00	( 1 2 3 6 5 4  )
+G_LOOP:  2  13  6   	1.2866487167045098e+00	( 1 2 4 6 5 3  )
+G_LOOP:  2  14  6   	1.2864015535841200e+00	( 1 5 3 6 2 4  )
+G_LOOP:  2  15  6   	1.2873128705939920e+00	( 1 5 4 6 2 3  )
+GACTION: 6.488974e+00
+Aggregate time to do gauge measurement 6.800009e+00
+dslash_fn_field: fn, notify: Signal QUDA to refresh links
+CG: Convergence at 96 iterations, L2 relative residual: iterated = 1.602738e-07, true = 1.602738e-07
+Saving 2194 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/tunecache.tsv
+CONGRAD5: time = 5.846848e+00 (fn_QUDA D) masses = 1 iters = 96 mflops = 6.466140e+03
+ OK converged final_rsq= 2.6e-14 (cf 4e-14) rel = 2.8e-12 (cf 0) restarts = 0 iters= 96
+CG: Convergence at 27 iterations, L2 relative residual: iterated = 1.994668e-07, true = 1.994668e-07
+CONGRAD5: time = 4.276395e-02 (fn_QUDA D) masses = 1 iters = 27 mflops = 2.486461e+05
+ OK converged final_rsq= 4e-14 (cf 4e-14) rel = 4.3e-12 (cf 0) restarts = 0 iters= 27
+PBP: mass 1.300000e-02     1.250110e-02  9.046689e-03  -5.700127e-04  -5.700140e-04 ( 1 of 1 )
+FACTION: mass = 1.300000e-02,  1.501922e+00 ( 1 of 1 )
+CG: Convergence at 90 iterations, L2 relative residual: iterated = 1.920534e-07, true = 1.920534e-07
+CONGRAD5: time = 1.253440e-01 (fn_QUDA D) masses = 1 iters = 90 mflops = 2.827708e+05
+ OK converged final_rsq= 3.7e-14 (cf 4e-14) rel = 4.1e-12 (cf 0) restarts = 0 iters= 90
+CG: Convergence at 10 iterations, L2 relative residual: iterated = 1.620792e-07, true = 1.620792e-07
+CONGRAD5: time = 2.216887e-02 (fn_QUDA D) masses = 1 iters = 10 mflops = 1.776446e+05
+ OK converged final_rsq= 2.6e-14 (cf 4e-14) rel = 2.9e-12 (cf 0) restarts = 0 iters= 10
+PBP: mass 6.500000e-02     5.431705e-02  5.270804e-02  8.647345e-05  8.647320e-05 ( 1 of 1 )
+FACTION: mass = 6.500000e-02,  1.499961e+00 ( 1 of 1 )
+dslash_fn_field: fn, notify: Signal QUDA to refresh links
+CG: Convergence at 23 iterations, L2 relative residual: iterated = 1.158685e-08, true = 1.158685e-08
+CONGRAD5: time = 4.422402e-02 (fn_QUDA D) masses = 1 iters = 23 mflops = 2.048167e+05
+ OK converged final_rsq= 1.3e-16 (cf 4e-16) rel = 2.6e-14 (cf 0) restarts = 0 iters= 23
+CG: Convergence at 1 iterations, L2 relative residual: iterated = 5.955740e-09, true = 5.955740e-09
+CONGRAD5: time = 9.970903e-03 (fn_QUDA D) masses = 1 iters = 1 mflops = 3.949673e+04
+ OK converged final_rsq= 3.5e-17 (cf 4e-16) rel = 6.9e-15 (cf 0) restarts = 0 iters= 1
+PBP: mass 8.380000e-01     4.704918e-01  4.720517e-01  -5.620106e-04  -5.620106e-04 ( 1 of 1 )
+FACTION: mass = 8.380000e-01,  1.496554e+00 ( 1 of 1 )
+Aggregate time to do pbp measurements 6.996369e+00
+RUNNING COMPLETED
+average cg iters for step= 3.320000e+02
+Time = 5.634622e+02 seconds
+total_iters = 0
+
+
+get_i(0): EOF on input.
+WARNING: Environment variable QUDA_PROFILE_OUTPUT_BASE is not set; writing to profile.tsv and profile_async.tsv
+Saving 359 sets of cached parameters to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/profile_0.tsv
+Saving 2 sets of cached profiles to /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune/profile_async_0.tsv
+
+               initQuda Total time = 386.44 secs
+                  init     = 386.440213 secs (   100%), with        2 calls at 1.932201e+08 us per call
+     total accounted       = 386.440213 secs (   100%)
+     total missing         = 0.000005 secs (1.29e-06%)
+
+          loadGaugeQuda Total time = 3.54068 secs
+              download     = 1.007207 secs (  28.4%), with       48 calls at 2.098348e+04 us per call
+                  init     = 2.533146 secs (  71.5%), with       48 calls at 5.277388e+04 us per call
+               compute     = 0.000005 secs (0.000141%), with       48 calls at 1.041667e-01 us per call
+                  free     = 0.000268 secs (0.00757%), with       48 calls at 5.583333e+00 us per call
+     total accounted       = 3.540626 secs (   100%)
+     total missing         = 0.000053 secs (0.0015%)
+
+             dslashQuda Total time = 0.468224 secs
+              download     = 0.125763 secs (  26.9%), with      163 calls at 7.715521e+02 us per call
+                upload     = 0.209436 secs (  44.7%), with      163 calls at 1.284883e+03 us per call
+                  init     = 0.005545 secs (  1.18%), with      163 calls at 3.401840e+01 us per call
+               compute     = 0.127161 secs (  27.2%), with      163 calls at 7.801288e+02 us per call
+                  free     = 0.000219 secs (0.0468%), with      163 calls at 1.343558e+00 us per call
+     total accounted       = 0.468124 secs (   100%)
+     total missing         = 0.000100 secs (0.0214%)
+
+             invertQuda Total time = 6.0875 secs
+              download     = 0.008663 secs ( 0.142%), with        6 calls at 1.443833e+03 us per call
+                upload     = 0.003572 secs (0.0587%), with        6 calls at 5.953333e+02 us per call
+                  init     = 0.007689 secs ( 0.126%), with        6 calls at 1.281500e+03 us per call
+              preamble     = 0.000002 secs (3.29e-05%), with        6 calls at 3.333333e-01 us per call
+               compute     = 6.036748 secs (  99.2%), with        6 calls at 1.006125e+06 us per call
+              epilogue     = 0.007526 secs ( 0.124%), with       18 calls at 4.181111e+02 us per call
+                  free     = 0.000086 secs (0.00141%), with       12 calls at 7.166667e+00 us per call
+     total accounted       = 6.064286 secs (  99.6%)
+     total missing         = 0.023210 secs ( 0.381%)
+
+   invertMultiShiftQuda Total time = 33.5939 secs
+              download     = 0.048011 secs ( 0.143%), with       50 calls at 9.602200e+02 us per call
+                upload     = 0.308151 secs ( 0.917%), with       50 calls at 6.163020e+03 us per call
+                  init     = 0.160864 secs ( 0.479%), with      200 calls at 8.043200e+02 us per call
+              preamble     = 1.003773 secs (  2.99%), with      100 calls at 1.003773e+04 us per call
+               compute     = 27.193798 secs (  80.9%), with       50 calls at 5.438760e+05 us per call
+              epilogue     = 4.021410 secs (    12%), with      100 calls at 4.021410e+04 us per call
+                  free     = 0.003666 secs (0.0109%), with      100 calls at 3.666000e+01 us per call
+     total accounted       = 32.739673 secs (  97.5%)
+     total missing         = 0.854242 secs (  2.54%)
+
+      computeKSLinkQuda Total time = 17.8205 secs
+              download     = 0.335605 secs (  1.88%), with       21 calls at 1.598119e+04 us per call
+                upload     = 0.529282 secs (  2.97%), with       21 calls at 2.520390e+04 us per call
+                  init     = 0.131213 secs ( 0.736%), with       42 calls at 3.124119e+03 us per call
+               compute     = 16.806609 secs (  94.3%), with       28 calls at 6.002360e+05 us per call
+                 comms     = 0.013806 secs (0.0775%), with       21 calls at 6.574286e+02 us per call
+                  free     = 0.001252 secs (0.00703%), with       42 calls at 2.980952e+01 us per call
+     total accounted       = 17.817767 secs (   100%)
+     total missing         = 0.002778 secs (0.0156%)
+
+   computeGaugeForceQuda Total time = 18.0761 secs
+              download     = 2.091255 secs (  11.6%), with       24 calls at 8.713563e+04 us per call
+                upload     = 2.317529 secs (  12.8%), with       12 calls at 1.931274e+05 us per call
+                  init     = 0.094192 secs ( 0.521%), with       36 calls at 2.616444e+03 us per call
+               compute     = 13.567323 secs (  75.1%), with       12 calls at 1.130610e+06 us per call
+                 comms     = 0.005155 secs (0.0285%), with       12 calls at 4.295833e+02 us per call
+                  free     = 0.000630 secs (0.00349%), with       12 calls at 5.250000e+01 us per call
+     total accounted       = 18.076084 secs (   100%)
+     total missing         = 0.000020 secs (0.000111%)
+
+   updateGaugeFieldQuda Total time = 2.15661 secs
+              download     = 1.856647 secs (  86.1%), with       18 calls at 1.031471e+05 us per call
+                upload     = 0.138422 secs (  6.42%), with       18 calls at 7.690111e+03 us per call
+                  init     = 0.002900 secs ( 0.134%), with       18 calls at 1.611111e+02 us per call
+               compute     = 0.157729 secs (  7.31%), with       18 calls at 8.762722e+03 us per call
+                  free     = 0.000885 secs ( 0.041%), with       18 calls at 4.916667e+01 us per call
+     total accounted       = 2.156583 secs (   100%)
+     total missing         = 0.000024 secs (0.00111%)
+
+   computeStaggeredOprodQuda Total time = 1.16814 secs
+              download     = 0.698171 secs (  59.8%), with      184 calls at 3.794408e+03 us per call
+                upload     = 0.285444 secs (  24.4%), with        8 calls at 3.568050e+04 us per call
+                  init     = 0.004860 secs ( 0.416%), with      192 calls at 2.531250e+01 us per call
+               compute     = 0.178913 secs (  15.3%), with      176 calls at 1.016551e+03 us per call
+     total accounted       = 1.167388 secs (  99.9%)
+     total missing         = 0.000750 secs (0.0642%)
+
+   computeHISQForceQuda Total time = 44.5847 secs
+              download     = 0.097429 secs ( 0.219%), with       20 calls at 4.871450e+03 us per call
+                upload     = 0.292744 secs ( 0.657%), with        4 calls at 7.318600e+04 us per call
+                  init     = 0.007699 secs (0.0173%), with        4 calls at 1.924750e+03 us per call
+               compute     = 43.250136 secs (    97%), with       20 calls at 2.162507e+06 us per call
+                 comms     = 0.936280 secs (   2.1%), with       28 calls at 3.343857e+04 us per call
+                  free     = 0.000400 secs (0.000897%), with        4 calls at 1.000000e+02 us per call
+     total accounted       = 44.584688 secs (   100%)
+     total missing         = 0.000040 secs (8.97e-05%)
+
+         projectSU3Quda Total time = 5.14835 secs
+              download     = 2.009382 secs (    39%), with        3 calls at 6.697940e+05 us per call
+                upload     = 3.021932 secs (  58.7%), with        3 calls at 1.007311e+06 us per call
+                  init     = 0.001706 secs (0.0331%), with        3 calls at 5.686667e+02 us per call
+               compute     = 0.115236 secs (  2.24%), with        3 calls at 3.841200e+04 us per call
+                  free     = 0.000013 secs (0.000253%), with        3 calls at 4.333333e+00 us per call
+     total accounted       = 5.148269 secs (   100%)
+     total missing         = 0.000083 secs (0.00161%)
+
+                endQuda Total time = 0.099283 secs
+
+       initQuda-endQuda Total time = 563.341 secs
+
+                   QUDA Total time = 519.184 secs
+              download     = 8.278195 secs (  1.59%), with      537 calls at 1.541563e+04 us per call
+                upload     = 7.106525 secs (  1.37%), with      285 calls at 2.493518e+04 us per call
+                  init     = 389.390049 secs (    75%), with      714 calls at 5.453642e+05 us per call
+              preamble     = 1.003774 secs ( 0.193%), with      106 calls at 9.469566e+03 us per call
+               compute     = 107.433676 secs (  20.7%), with      524 calls at 2.050261e+05 us per call
+                 comms     = 0.955244 secs ( 0.184%), with       61 calls at 1.565974e+04 us per call
+              epilogue     = 4.028944 secs ( 0.776%), with      118 calls at 3.414359e+04 us per call
+                  free     = 0.007420 secs (0.00143%), with      402 calls at 1.845771e+01 us per call
+     total accounted       = 518.203827 secs (  99.8%)
+     total missing         = 0.980425 secs ( 0.189%)
+
+Device memory used = 3626.6 MB
+Page-locked host memory used = 4084.4 MB
+Total host memory used >= 4130.0 MB
+
+exit: Thu Feb 22 16:15:15 2018
+

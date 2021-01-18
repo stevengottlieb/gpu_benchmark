@@ -1,0 +1,20 @@
+#!/usr/bin/csh -v
+#BSUB -P CSC190PORT
+#BSUB -W 120
+#BSUB -nnodes 1
+#BSUB -e run.error
+#BSUB -o run.output
+#BSUB -J test
+
+cd /gpfs/alpinetds/csc190/scratch/gottlieb/run
+module load cuda
+
+#setenv CUDA_NIC_INTEROP 1
+setenv QUDA_RESOURCE_PATH /gpfs/alpinetds/csc190/scratch/gottlieb/run/tune
+#export I_MPI_DEBUG=5
+foreach ns (8 12 16 20 24 28 32 )
+   echo $ns
+    jsrun -n 1 -g1 -a1 -c1 -brs ./su3_rhmd_hisq.summit <params.$ns  >out.$ns.pretune
+    jsrun -n 1 -g1 -a1 -c1 -brs ./su3_rhmd_hisq.summit <params.$ns  >out.$ns
+
+end

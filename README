@@ -1,0 +1,15 @@
+The files in this directory include:
+
+1) run.bsub 
+	a sample job submission script to run a volume scaling study  
+	For each volume the job is run twice, once to tune QUDA and once
+	just for measurements.
+
+2) rat.m013m065m838
+	a rational function file needed by su3_rhmd_hisq.
+
+3) params.ns (ns=8, 12, 16, ..., 32)
+	input files for each lattice volume ns^4 
+
+4) out.ns & out,ns.tune
+	sample outputs from Summit for each volume
