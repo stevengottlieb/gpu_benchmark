@@ -1,0 +1,43 @@
+#!/usr/bin/csh -v
+#BSUB -P LGT104
+#BSUB -W 60
+#BSUB -nnodes 256
+#BSUB -e error_256.%J
+#BSUB -o output_256.%J
+#BSUB -J ws256
+
+cd /gpfs/alpine/proj-shared/lgt104/gottlieb/weak_scaling/weakscaling_oct20
+module load gcc/6.4.0
+module load spectrum-mpi
+module load cuda
+
+set nodes = 256
+#setenv CUDA_NIC_INTEROP 1
+#setenv QUDA_RESOURCE_PATH /ccs/home/gottlieb/summit/run/tune
+setenv QUDA_MILC_HISQ_RECONSTRUCT 13
+setenv QUDA_MILC_HISQ_RECONSTRUCT_SLOPPY 9
+setenv QUDA_ENABLE_GDR 1
+
+setenv QUDA_RESOURCE_PATH /gpfs/alpine/proj-shared/lgt104/gottlieb/weak_scaling/weakscaling_oct20/tune.${nodes}
+mkdir $QUDA_RESOURCE_PATH
+setenv I_MPI_DEBUG 5
+
+make_input.csh $nodes
+setenv  OMP_NUM_THREADS 7
+set runargs = "-qmp-alloc-map 3 2 1 0 -qmp-logic-map 3 2 1 0 "
+echo $runargs
+
+#set COMMAND = "jsrun --nrs ${nodes} -a6 -g6 -c42 -dpacked -b packed:7 --latency_priority gpu-cpu  --smpiargs=\"-gpu\" ./bind-6gpu.sh"
+set COMMAND = "jsrun --nrs $nodes -a6 -g6 -c42 -dpacked -b packed:7 --latency_priority gpu-cpu  ./bind-6gpu.sh "
+
+# Execute command
+echo $COMMAND
+
+setenv APP "../bin/su3_rhmd_hisq.sp-large $runargs input.$nodes.tune output.$nodes.tune"
+echo $APP
+
+$COMMAND
+setenv APP "../bin/su3_rhmd_hisq.sp-large $runargs input.$nodes output.$nodes"
+echo $APP
+
+$COMMAND
